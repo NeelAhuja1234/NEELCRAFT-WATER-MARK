@@ -1,12 +1,12 @@
 #!/bin/bash
 # ==========================================
-# Atyro Cloud Premium MOTD Installer (v3 PRO)
+# NEELCRAFT Premium MOTD Installer 
 # FULL CLEAN + ONLY CUSTOM MOTD
 # ==========================================
 
 set -e
 
-echo "🔧 Installing Atyro Cloud Premium MOTD..."
+echo "🔧 Installing NEELCRAFT Premium MOTD..."
 
 # ================================
 # REMOVE ALL OLD MOTD SYSTEM
@@ -46,9 +46,9 @@ echo "session optional pam_exec.so stdout /etc/update-motd.d/00-atyrocloud" >> /
 # ================================
 # CREATE PREMIUM MOTD SCRIPT
 # ================================
-echo "✨ Creating Atyro Cloud MOTD..."
+echo "✨ Creating NEELCRAFT MOTD..."
 
-cat << 'EOF' > /etc/update-motd.d/00-atyrocloud
+cat << 'EOF' > /etc/update-motd.d/00-neelcraft
 #!/bin/bash
 
 # ===== Colors =====
@@ -92,7 +92,7 @@ LOGO
 echo -e "${RESET}"
 
 # ===== HEADER =====
-echo -e "${GREEN}🚀 Welcome to Atyro Cloud Datacenter${RESET}"
+echo -e "${GREEN}🚀 Welcome to NEELCRAFT Datacenter${RESET}"
 echo -e "${BLUE}High Performance • Secure • Reliable Infrastructure${RESET}"
 echo -e "${GRAY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"
 
@@ -111,14 +111,13 @@ printf "${CYAN}%-18s${RESET} %s\n" "IP:" "$IP"
 echo -e "${GRAY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"
 
 # ===== FOOTER =====
-echo -e "${GREEN}Support:${RESET}  support@atyro.cloud"
 echo -e "${GREEN}Discord:${RESET}  https://discord.gg/RTcr3gmQFr"
-echo -e "${GREEN}Website:${RESET}  https://atyro.cloud"
-echo -e "${MAGENTA}Atyro Cloud — Premium Hosting Experience 💎${RESET}"
+echo -e "${GREEN}YouTube:${RESET}  https://atyro.cloud"
+echo ""
 echo ""
 EOF
 
-chmod +x /etc/update-motd.d/00-atyrocloud
+chmod +x /etc/update-motd.d/00-neelcraft
 
 # ================================
 # RESTART SERVICES
@@ -126,7 +125,7 @@ chmod +x /etc/update-motd.d/00-atyrocloud
 systemctl restart ssh 2>/dev/null || true
 
 echo ""
-echo "✅ Atyro Cloud MOTD Installed (ONLY MODE ENABLED)"
+echo "✅ NEELCRAFT MOTD Installed (ONLY MODE ENABLED)"
 echo "🚫 All default MOTD fully removed"
 echo "🔥 Only your custom MOTD will show"
 echo "➡ Reconnect SSH to see changes"
